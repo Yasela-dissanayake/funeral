@@ -134,11 +134,16 @@ function NavBar() {
             <IconButton
               aria-label="favourite"
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: { primaryColor }, display: "block" }}
+              sx={{
+                my: 2,
+                color: { primaryColor },
+                display: "flex",
+                mr: 1,
+              }}
             >
               <FavoriteBorderIcon />
             </IconButton>
-            <PrimaryButton text="LIST YOUR BUSINESS" />
+            <PrimaryButton text="LIST YOUR BUSINESS" className="mx-2" />
             <SecondaryButton text="NEWS FEED" />
           </Box>
 
