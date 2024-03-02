@@ -143,7 +143,9 @@ function NavBar() {
             >
               <FavoriteBorderIcon />
             </IconButton>
-            <PrimaryButton text="LIST YOUR BUSINESS" className="mx-2" />
+            <div className="3">
+              <PrimaryButton text="LIST YOUR BUSINESS" />
+            </div>
             <SecondaryButton text="NEWS FEED" />
           </Box>
 
@@ -151,7 +153,10 @@ function NavBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar
+                  alt="Remy Sharp"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu0gYR-As9-_w2_fjRc895mD_91WQ5p7N_9Q&usqp=CAU"
+                />
               </IconButton>
             </Tooltip>
             <Menu
