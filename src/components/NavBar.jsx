@@ -14,6 +14,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { primaryColor } from "../utils/Colors";
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
+import Grid from "@mui/material/Grid";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -41,27 +42,54 @@ function NavBar() {
   return (
     <AppBar
       position="static"
-      sx={{ bgcolor: "transparent", boxShadow: "none", margin: 0 }}
+      sx={{
+        bgcolor: "transparent",
+        boxShadow: "none",
+        paddingLeft: "160px",
+        paddingRight: "160px",
+      }}
     >
       <Container maxWidth="xl" sx={{ margin: 0 }}>
         <Toolbar disableGutters>
           {/* main logo text */}
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#"
-            sx={{
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "#5A189A",
-              textDecoration: "none",
-            }}
-          >
-            Funeral page.
-          </Typography>
+          <Grid container width="15%">
+            <Grid item lg={12}>
+              <Typography
+                variant="h5"
+                noWrap
+                component="a"
+                href="#"
+                sx={{
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: "-0.1rem",
+                  color: "#5A189A",
+                  textDecoration: "none",
+                }}
+              >
+                Funeral page.
+              </Typography>
+            </Grid>
+            <Grid item lg={12}>
+              <Typography
+                noWrap
+                component="a"
+                href="#"
+                sx={{
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "monospace",
+                  fontWeight: 400,
+                  letterSpacing: "0rem",
+                  color: "#343437",
+                  textDecoration: "none",
+                  fontSize: "12px",
+                }}
+              >
+                Making Memories Live
+              </Typography>
+            </Grid>
+          </Grid>
 
           {/* mobile menu */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
