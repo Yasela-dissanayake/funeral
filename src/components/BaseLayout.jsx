@@ -10,7 +10,6 @@ const BaseLayout = () => {
     <div className="">
       <NavBar />
       <SearchBar />
-      {/* <SideBar /> */}
       <Outlet />
     </div>
   );
