@@ -6,7 +6,7 @@ import SideBar from "./SideBar";
 import SearchBar from "./SearchBar";
 import Stack from "@mui/material/Stack";
 import RightBar from "../components/RightBar";
-import Feed from "../components/Feed";
+import FeedLayout from "./FeedLayout";
 
 const BaseLayout = () => {
   return (
@@ -15,10 +15,9 @@ const BaseLayout = () => {
       <SearchBar />
       <Stack direction="row" spacing={2} justifyContent="center">
         <SideBar />
-        <Feed />
+        <FeedLayout />
         <RightBar />
       </Stack>
-      <Outlet />
     </div>
   );
 };

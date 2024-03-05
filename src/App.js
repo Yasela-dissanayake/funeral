@@ -3,6 +3,7 @@ import BaseLayout from "./components/BaseLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Obituaries from "./pages/Obituaries";
+import FeedLayout from "./components/FeedLayout";
 
 const router = createBrowserRouter([
   {
