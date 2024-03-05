@@ -12,8 +12,8 @@ import { TitleContext } from "../context/TitleContext";
 const SideBar = () => {
   const { updateTitle } = useContext(TitleContext);
 
-  const handleTitle = (path) => {
-    updateTitle(path);
+  const handleTitle = (title) => {
+    updateTitle(title);
   };
 
   return (
@@ -34,7 +34,7 @@ const SideBar = () => {
                 to={item.path}
                 key={item.id}
                 underline="none"
-                // onClick={handleTitle(item.path)}
+                onClick={handleTitle(item.name)}
               >
                 <ListItem disablePadding>
                   <ListItemButton>

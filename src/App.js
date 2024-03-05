@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Obituaries from "./pages/Obituaries";
 import FeedLayout from "./components/FeedLayout";
+import TitleContextProvider from "./context/TitleContext";
 
 const router = createBrowserRouter([
   {
@@ -81,7 +82,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div>
-      <RouterProvider router={router} />
+      <TitleContextProvider>
+        <RouterProvider router={router} />
+      </TitleContextProvider>
     </div>
   );
 }

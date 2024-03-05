@@ -34,11 +34,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const SearchBar = () => {
-  const { title } = useContext(TitleContext);
+  const { pageTitle } = useContext(TitleContext);
 
-  if (!title) {
-    return null;
-  }
+  // if (!title) {
+  //   return null;
+  // }
 
   return (
     <Box
@@ -52,7 +52,7 @@ const SearchBar = () => {
       justifyContent="space-between"
     >
       <Typography color="white" fontWeight="600" fontSize="22px">
-        {title}
+        {pageTitle}
       </Typography>
       <Search>
         <StyledInputBase
