@@ -116,9 +116,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
 import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
+import { sidebarItems } from "../data/Data";
+import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
   return (
@@ -133,22 +134,19 @@ const SideBar = () => {
     >
       <nav aria-label="main mailbox folders">
         <List>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <InboxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Inbox" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <DraftsIcon />
-              </ListItemIcon>
-              <ListItemText primary="Drafts" />
-            </ListItemButton>
-          </ListItem>
+          {sidebarItems &&
+            sidebarItems.map((item) => (
+              <NavLink to={item.path} key={item.id}>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <img src={item.icon} alt={item.name} />
+                    </ListItemIcon>
+                    <ListItemText primary={item.name} />
+                  </ListItemButton>
+                </ListItem>
+              </NavLink>
+            ))}
         </List>
       </nav>
     </Box>

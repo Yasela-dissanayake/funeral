@@ -2,6 +2,7 @@ import "./App.css";
 import BaseLayout from "./components/BaseLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
+import Obituaries from "./pages/Obituaries";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,66 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/plan-ahead",
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/bereavement-support",
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/law-advice",
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/funeral-wishes",
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/funeral-directors",
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/obituaries",
+    element: <BaseLayout />,
+    children: [
+      {
+        index: true,
+        element: <Obituaries />,
       },
     ],
   },

@@ -6,11 +6,12 @@ import Feed from "../components/Feed";
 
 const Home = () => {
   return (
-    <Stack direction="row" spacing={2} justifyContent="center">
-      <SideBar />
-      <Feed />
-      <RightBar />
-    </Stack>
+    // <Stack direction="row" spacing={2} justifyContent="center">
+    //   {/* <SideBar /> */}
+    //   <Feed />
+    //   <RightBar />
+    // </Stack>
+    <h1>Test</h1>
   );
 };
 
