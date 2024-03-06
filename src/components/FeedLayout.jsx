@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const Feed = () => {
   return (
-    <Box flex={5} bgcolor="red">
+    <Box flex={5}>
       <Outlet />
     </Box>
   );
