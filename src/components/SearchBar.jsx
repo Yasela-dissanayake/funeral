@@ -7,31 +7,7 @@ import { styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { TitleContext } from "../context/TitleContext";
-
-const Search = styled("div")(({ theme }) => ({
-  height: "50%",
-  alignSelf: "center",
-  borderRadius: "25px",
-  backgroundColor: "white",
-  "&:hover": {},
-  marginLeft: 0,
-}));
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: "5px 15px",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-  },
-}));
+import IconButton from "@mui/material/IconButton";
 
 const SearchBar = () => {
   const { pageTitle } = useContext(TitleContext);
@@ -52,18 +28,51 @@ const SearchBar = () => {
       textAlign="center"
       justifyContent="space-between"
     >
-      <Typography color="white" fontWeight="600" fontSize="22px">
+      <Typography
+        color="white"
+        fontWeight="600"
+        fontSize="22px"
+        alignSelf="center"
+      >
         {pageTitle}
       </Typography>
-      <Search>
-        <StyledInputBase
+
+      <Box
+        bgcolor="white"
+        alignSelf="center"
+        justifyContent="space-between"
+        display="flex"
+        padding="2px 15px"
+        width="460px"
+        borderRadius="25px"
+        marginRight="160px"
+      >
+        <InputBase
           placeholder="Search…"
           inputProps={{ "aria-label": "search" }}
+          sx={{
+            color: "inherit",
+            "& .MuiInputBase-input": {
+              paddingLeft: `calc(1em + ${8})`,
+            },
+            fontSize: "14px",
+          }}
         />
-        <SearchIconWrapper>
-          <SearchIcon />
-        </SearchIconWrapper>
-      </Search>
+        <Box
+          sx={{
+            padding: "5px 15px",
+            pointerEvents: "none",
+            alignSelf: "center",
+            display: "inline-block",
+            textAlign: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <IconButton color="#111827" onClick={() => {}}>
+            <SearchIcon />
+          </IconButton>
+        </Box>
+      </Box>
     </Box>
   );
 };
