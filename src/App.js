@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/plan-ahead",
-    element: <BaseLayout />,
+    element: <PlanAhead />,
     children: [
       {
         index: true,
