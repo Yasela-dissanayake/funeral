@@ -1,9 +1,15 @@
 import "./App.css";
 import BaseLayout from "./components/BaseLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import TitleContextProvider from "./context/TitleContext";
+
 import Home from "./pages/Home";
 import Obituaries from "./pages/Obituaries";
-import TitleContextProvider from "./context/TitleContext";
+import PlanAhead from "./pages/PlanAhead";
+import Bereavement from "./pages/Bereavement";
+import LawAdvice from "./pages/LawAdvice";
+import FuneralWishes from "./pages/FuneralWishes";
+import FuneralDirectors from "./pages/FuneralDirectors";
 
 const router = createBrowserRouter([
   {
@@ -18,11 +24,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/plan-ahead",
-    element: <PlanAhead />,
+    element: <BaseLayout />,
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <PlanAhead />,
       },
     ],
   },
@@ -32,7 +38,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Bereavement />,
       },
     ],
   },
@@ -42,7 +48,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <LawAdvice />,
       },
     ],
   },
@@ -52,7 +58,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <FuneralWishes />,
       },
     ],
   },
@@ -62,7 +68,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <FuneralDirectors />,
       },
     ],
   },

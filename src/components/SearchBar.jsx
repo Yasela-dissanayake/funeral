@@ -36,10 +36,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const SearchBar = () => {
   const { pageTitle } = useContext(TitleContext);
 
-  // if (!title) {
-  //   return null;
-  // }
+  if (!pageTitle) {
+    return null;
+  }
 
+  console.log(pageTitle);
   return (
     <Box
       bgcolor={primaryColor}

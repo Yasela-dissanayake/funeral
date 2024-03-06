@@ -5,14 +5,7 @@ import RightBar from "../components/RightBar";
 import Feed from "../components/FeedLayout";
 
 const Home = () => {
-  return (
-    // <Stack direction="row" spacing={2} justifyContent="center">
-    //   {/* <SideBar /> */}
-    //   <Feed />
-    //   <RightBar />
-    // </Stack>
-    <h1>Test</h1>
-  );
+  return <h1>Test</h1>;
 };
 
 export default Home;

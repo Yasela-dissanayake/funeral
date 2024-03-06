@@ -14,6 +14,7 @@ const SideBar = () => {
 
   const handleTitle = (title) => {
     updateTitle(title);
+    console.log("this is from handle" + title);
   };
 
   return (
@@ -34,7 +35,8 @@ const SideBar = () => {
                 to={item.path}
                 key={item.id}
                 underline="none"
-                onClick={handleTitle(item.name)}
+                onClick={() => handleTitle(item.name)}
+                sx={{ textDecoration: "none" }}
               >
                 <ListItem disablePadding>
                   <ListItemButton>
