@@ -4,7 +4,7 @@ import PostCard from "../components/PostCard";
 const Obituaries = () => {
   return (
     <div>
-      <PostCard />
+      <PostCard username="Chadwick Brown" />
     </div>
   );
 };

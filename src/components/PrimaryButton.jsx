@@ -7,7 +7,7 @@ const PrimaryButton = ({ text, className, ...props }) => {
     <div className={`${className}`} {...props}>
       <Button
         variant="contained"
-        onClick=""
+        onClick={() => {}}
         sx={{
           my: 2,
           px: 3,
@@ -18,6 +18,7 @@ const PrimaryButton = ({ text, className, ...props }) => {
           display: "block",
           borderRadius: 8,
           bgcolor: "#5A189A",
+          textTransform: "none",
           "&:hover": {
             bgcolor: "transparent",
             border: 1,

@@ -5,7 +5,7 @@ const SecondaryButton = ({ text }) => {
   return (
     <Button
       variant="outlined"
-      onClick=""
+      onClick={() => {}}
       sx={{
         my: 2,
         px: 3,

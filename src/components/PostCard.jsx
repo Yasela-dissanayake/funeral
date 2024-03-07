@@ -20,6 +20,10 @@ import Rose from "../icons/rose.svg";
 import Candle from "../icons/candle.svg";
 import Flowers from "../icons/flowers.svg";
 import Ribbon from "../icons/ribbon.svg";
+import { primaryColor } from "../utils/Colors";
+import PrimaryButton from "./PrimaryButton";
+import Grid from "@mui/material/Grid";
+import Location from "../icons/location.svg";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -31,7 +35,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function PostCard() {
+export default function PostCard({ username }) {
   const initialRoseCount = 10;
   const initialCandleCount = 65;
   const initialFlowerCount = 98;
@@ -76,33 +80,81 @@ export default function PostCard() {
     <Card sx={{ maxWidth: "100%" }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
+          <Avatar
+            aria-label="recipe"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu0gYR-As9-_w2_fjRc895mD_91WQ5p7N_9Q&usqp=CAU"
+          />
         }
         action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
+          <Box display="inline-flex">
+            <PrimaryButton text="Donate" />
+            <IconButton aria-label="settings">
+              <MoreVertIcon />
+            </IconButton>
+          </Box>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={
+          <Typography color={primaryColor} fontWeight="700">
+            {username}
+          </Typography>
+        }
+        subheader={
+          <Grid container>
+            <Grid lg={12} display="inline-flex">
+              <Typography fontSize="11px" color="text.secondary">
+                Born:
+              </Typography>
+              <Typography fontSize="11px" fontWeight="500" color="black">
+                12th January 1989
+              </Typography>
+              <Typography
+                fontSize="11px"
+                color="text.secondary"
+                sx={{ marginLeft: "10px" }}
+              >
+                Died:
+              </Typography>
+              <Typography fontSize="11px" fontWeight="500" color="black">
+                24th June 2020
+              </Typography>
+            </Grid>
+            <Grid display="block" lg={12}>
+              <Typography
+                fontWeight="600"
+                color="black"
+                fontSize="13px"
+                sx={{ marginTop: "3px" }}
+              >
+                Death Notice
+              </Typography>
+            </Grid>
+            <Grid display="inline-flex">
+              <Typography fontSize="13px" color={primaryColor}>
+                12 days ago
+              </Typography>
+              <Box sx={{ marginLeft: "10px", marginRight: "5px" }}>
+                <img src={Location} />
+              </Box>
+              <Typography fontSize="13px" color={primaryColor}>
+                London
+              </Typography>
+            </Grid>
+          </Grid>
+        }
+        sx={{ backgroundColor: "#FAF5FF" }}
       />
-      <CardMedia
-        component="img"
-        height="194"
-        image="/static/images/cards/paella.jpg"
-        alt="Paella dish"
-      />
+
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          Venenatis, quis risus justo, nisl, lorem venenatis. Nunc, pulvinar
+          amet in odio ac tellus suscipit. Nibh commodo auctor vivamus id
+          tincidunt. Venenatis, quis risus justo, nisl, lorem venenatis. Nunc,
+          pulvinar amet in odio ac tellus suscipit. Nibh commodo auctor vivamus
+          id tincidunt. <a href="#">Read more</a>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Box justifyContent="space-between">
+        <Box display="inline-flex">
           <Box>
             <IconButton aria-label="rose" onClick={handleRoseCount}>
               <ChipBox icon={Rose} count={roseCount} />
@@ -117,7 +169,7 @@ export default function PostCard() {
               <ChipBox icon={Ribbon} count={ribbonCount} />
             </IconButton>
           </Box>
-          <Box>
+          <Box alignSelf="end">
             <IconButton aria-label="add to favorites">
               <FavoriteIcon />
             </IconButton>
