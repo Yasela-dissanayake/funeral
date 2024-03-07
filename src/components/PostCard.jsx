@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -11,11 +11,15 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CommentButton from "./CoommentButton";
 import Box from "@mui/material/Box";
+import ChipBox from "../components/ChipBox";
+import Eye from "../icons/eye.svg";
+import Rose from "../icons/rose.svg";
+import Candle from "../icons/candle.svg";
+import Flowers from "../icons/flowers.svg";
+import Ribbon from "../icons/ribbon.svg";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -28,14 +32,48 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function PostCard() {
+  const initialRoseCount = 10;
+  const initialCandleCount = 65;
+  const initialFlowerCount = 98;
+  const initialRibbonCount = 5;
+
   const [expanded, setExpanded] = React.useState(false);
+  const [roseCount, setRoseCount] = useState(initialRoseCount);
+  const [candleCount, setCandleCount] = useState(initialCandleCount);
+  const [flowerCount, setFlowerCount] = useState(initialFlowerCount);
+  const [ribbonCount, setRibbonCount] = useState(initialRibbonCount);
+  const [viewCount, setViewCount] = useState(1096);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
+  const handleRoseCount = () => {
+    setRoseCount(
+      roseCount === initialRoseCount ? roseCount + 1 : initialRoseCount
+    );
+  };
+
+  const handleCandleCount = () => {
+    setCandleCount(
+      candleCount === initialCandleCount ? candleCount + 1 : initialCandleCount
+    );
+  };
+
+  const handleFlowerCount = () => {
+    setFlowerCount(
+      flowerCount === initialFlowerCount ? flowerCount + 1 : initialFlowerCount
+    );
+  };
+
+  const handleRibbonCount = () => {
+    setRibbonCount(
+      ribbonCount === initialRibbonCount ? ribbonCount + 1 : initialRibbonCount
+    );
+  };
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: "100%" }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -64,25 +102,36 @@ export default function PostCard() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <Box>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-          <ExpandMore
-            expand={expanded}
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="show more"
-          >
-            <CommentButton />
-            {/* <ExpandMoreIcon /> */}
-          </ExpandMore>
-          <IconButton aria-label="share">
-            <ShareIcon />
-          </IconButton>
+        <Box justifyContent="space-between">
+          <Box>
+            <IconButton aria-label="rose" onClick={handleRoseCount}>
+              <ChipBox icon={Rose} count={roseCount} />
+            </IconButton>
+            <IconButton aria-label="candle" onClick={handleCandleCount}>
+              <ChipBox icon={Candle} count={candleCount} />
+            </IconButton>
+            <IconButton aria-label="flowers" onClick={handleFlowerCount}>
+              <ChipBox icon={Flowers} count={flowerCount} />
+            </IconButton>
+            <IconButton aria-label="ribbon" onClick={handleRibbonCount}>
+              <ChipBox icon={Ribbon} count={ribbonCount} />
+            </IconButton>
+          </Box>
+          <Box>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+            <ExpandMore
+              expand={expanded}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+            >
+              <CommentButton />
+            </ExpandMore>
+
+            <ChipBox icon={Eye} count={viewCount} />
+          </Box>
         </Box>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>

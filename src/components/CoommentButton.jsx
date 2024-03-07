@@ -16,9 +16,14 @@ export default function IconLabelButtons() {
         startIcon={<img src={Sms} />}
         sx={{
           borderRadius: "25px",
-          borderColor: "#5A189A",
+          borderColor: "#BFB1EE",
           color: "#5A189A",
           padding: "0px",
+          backgroundColor: "#F8F2FD",
+
+          "&:hover": {
+            borderColor: "#5A189A",
+          },
         }}
       >
         {count}
