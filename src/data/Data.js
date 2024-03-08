@@ -25,7 +25,7 @@ export const sidebarItems = [
   { id: 6, name: "Obituaries", icon: obituaries, path: "/obituaries" },
 ];
 
-export const userDate = [
+export const userData = [
   {
     id: 1,
     name: "Chadwick Brown",
@@ -36,7 +36,7 @@ export const userDate = [
     date: "12",
     location: "London",
     message:
-      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
+      "Venenatis, quis risus justo, nisl, lorem venenatis. Nunc, pulvinar amet in odio ac tellus suscipit. Nibh commodo auctor vivamus id tincidunt. Venenatis, quis risus justo, nisl, lorem venenatis. Nunc, pulvinar amet in odio ac tellus suscipit. Nibh commodo auctor vivamus id tincidunt.",
   },
   {
     id: 2,

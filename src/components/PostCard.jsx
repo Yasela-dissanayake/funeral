@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
-import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import CommentButton from "./CommentButton";
 import Box from "@mui/material/Box";
@@ -42,7 +40,16 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function PostCard({ username }) {
+export default function PostCard({
+  name,
+  born,
+  died,
+  notice,
+  date,
+  location,
+  message,
+  image,
+}) {
   const initialRoseCount = 10;
   const initialCandleCount = 65;
   const initialFlowerCount = 98;
@@ -106,12 +113,7 @@ export default function PostCard({ username }) {
         </Typography>
       </Grid>
       <CardHeader
-        avatar={
-          <Avatar
-            aria-label="recipe"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu0gYR-As9-_w2_fjRc895mD_91WQ5p7N_9Q&usqp=CAU"
-          />
-        }
+        avatar={<Avatar aria-label="recipe" src={image} />}
         action={
           <Box display="inline-flex">
             <PrimaryButton text="Donate" />
@@ -122,7 +124,7 @@ export default function PostCard({ username }) {
         }
         title={
           <Typography color={primaryColor} fontWeight="700">
-            {username}
+            {name}
           </Typography>
         }
         subheader={
@@ -132,7 +134,7 @@ export default function PostCard({ username }) {
                 Born:
               </Typography>
               <Typography fontSize="11px" fontWeight="500" color="black">
-                12th January 1989
+                {born}
               </Typography>
               <Typography
                 fontSize="11px"
@@ -142,7 +144,7 @@ export default function PostCard({ username }) {
                 Died:
               </Typography>
               <Typography fontSize="11px" fontWeight="500" color="black">
-                24th June 2020
+                {died}
               </Typography>
             </Grid>
             <Grid display="block" lg={12}>
@@ -152,18 +154,18 @@ export default function PostCard({ username }) {
                 fontSize="13px"
                 sx={{ marginTop: "3px" }}
               >
-                Death Notice
+                {notice}
               </Typography>
             </Grid>
             <Grid display="inline-flex">
               <Typography fontSize="13px" color={primaryColor}>
-                12 days ago
+                {`${date} days ago`}
               </Typography>
               <Box sx={{ marginLeft: "10px", marginRight: "5px" }}>
                 <img src={Location} />
               </Box>
               <Typography fontSize="13px" color={primaryColor}>
-                London
+                {location}
               </Typography>
             </Grid>
           </Grid>
@@ -173,11 +175,7 @@ export default function PostCard({ username }) {
 
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Venenatis, quis risus justo, nisl, lorem venenatis. Nunc, pulvinar
-          amet in odio ac tellus suscipit. Nibh commodo auctor vivamus id
-          tincidunt. Venenatis, quis risus justo, nisl, lorem venenatis. Nunc,
-          pulvinar amet in odio ac tellus suscipit. Nibh commodo auctor vivamus
-          id tincidunt. <a href="#">Read more</a>
+          {message} <a href="#">Read more</a>
         </Typography>
       </CardContent>
       <Grid container display="inline-flex" justifyContent="space-between">
