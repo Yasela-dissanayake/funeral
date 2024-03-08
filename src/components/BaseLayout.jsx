@@ -11,7 +11,13 @@ const BaseLayout = () => {
     <div className="">
       <NavBar />
       <SearchBar />
-      <Stack direction="row" spacing={2} justifyContent="center">
+      <Stack
+        direction="row"
+        spacing={3}
+        justifyContent="center"
+        paddingRight="160px"
+        marginTop={5}
+      >
         <SideBar />
         <FeedLayout />
         <RightBar />

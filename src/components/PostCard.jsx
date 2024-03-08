@@ -101,7 +101,12 @@ export default function PostCard({
 
   return (
     <Card
-      sx={{ maxWidth: "100%", boxShadow: "none", border: "solid 1px #e4e2e2" }}
+      sx={{
+        maxWidth: "100%",
+        boxShadow: "none",
+        border: "solid 1px #e4e2e2",
+        borderRadius: "10px",
+      }}
     >
       <Grid container pt={2} pb={2} pl={1} alignItems="center">
         <img src={Services} />
