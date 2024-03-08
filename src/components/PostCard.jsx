@@ -11,19 +11,26 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import CommentButton from "./CoommentButton";
+import CommentButton from "./CommentButton";
 import Box from "@mui/material/Box";
 import ChipBox from "../components/ChipBox";
-import Eye from "../icons/eye.svg";
-import Rose from "../icons/rose.svg";
-import Candle from "../icons/candle.svg";
-import Flowers from "../icons/flowers.svg";
-import Ribbon from "../icons/ribbon.svg";
+import Eye from "../assets/icons/eye.svg";
+import Rose from "../assets/icons/rose.svg";
+import Candle from "../assets/icons/candle.svg";
+import Flowers from "../assets/icons/flowers.svg";
+import Ribbon from "../assets/icons/ribbon.svg";
 import { primaryColor } from "../utils/Colors";
 import PrimaryButton from "./PrimaryButton";
 import Grid from "@mui/material/Grid";
-import Location from "../icons/location.svg";
+import Location from "../assets/icons/location.svg";
+import MoreMenu from "./MoreMenu";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import Divider from "@mui/material/Divider";
+import FaceBook from "../assets/icons/fb.svg";
+import Twitter from "../assets/icons/twitter.svg";
+import Instagram from "../assets/icons/insta.svg";
+import YouTube from "../assets/icons/youtube.svg";
+import Services from "../assets/icons/funeralservices.svg";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -47,6 +54,7 @@ export default function PostCard({ username }) {
   const [flowerCount, setFlowerCount] = useState(initialFlowerCount);
   const [ribbonCount, setRibbonCount] = useState(initialRibbonCount);
   const [viewCount, setViewCount] = useState(1096);
+  const [favourite, setFavourite] = useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -76,8 +84,27 @@ export default function PostCard({ username }) {
     );
   };
 
+  const handleFavourite = () => {
+    if (!favourite) {
+      setFavourite(true);
+    } else {
+      setFavourite(false);
+    }
+  };
+
   return (
-    <Card sx={{ maxWidth: "100%" }}>
+    <Card
+      sx={{ maxWidth: "100%", boxShadow: "none", border: "solid 1px #e4e2e2" }}
+    >
+      <Grid container pt={2} pb={2} pl={1} alignItems="center">
+        <img src={Services} />
+        <Typography display="inline-flex" fontSize="15px" ml={1}>
+          Posted By
+          <Typography fontSize="15px" fontWeight="600" ml={1}>
+            Family Funeral Services
+          </Typography>
+        </Typography>
+      </Grid>
       <CardHeader
         avatar={
           <Avatar
@@ -88,9 +115,9 @@ export default function PostCard({ username }) {
         action={
           <Box display="inline-flex">
             <PrimaryButton text="Donate" />
-            <IconButton aria-label="settings">
-              <MoreVertIcon />
-            </IconButton>
+            <Box aria-label="settings" mt={2}>
+              <MoreMenu />
+            </Box>
           </Box>
         }
         title={
@@ -153,9 +180,31 @@ export default function PostCard({ username }) {
           id tincidunt. <a href="#">Read more</a>
         </Typography>
       </CardContent>
+      <Grid container display="inline-flex" justifyContent="space-between">
+        <Grid ml={2}>
+          <IconButton aria-label="facebook">
+            <img src={FaceBook} />
+          </IconButton>
+          <IconButton aria-label="twitter">
+            <img src={Twitter} />
+          </IconButton>
+          <IconButton aria-label="instagram">
+            <img src={Instagram} />
+          </IconButton>
+          <IconButton aria-label="youtube">
+            <img src={YouTube} />
+          </IconButton>
+        </Grid>
+        <Grid mr={3}>
+          <Typography variant="body2">
+            <a href="#">Bibliography</a>
+          </Typography>
+        </Grid>
+      </Grid>
+      <Divider />
       <CardActions disableSpacing>
-        <Box display="inline-flex">
-          <Box>
+        <Grid container display="inline-flex" justifyContent="space-between">
+          <Grid>
             <IconButton aria-label="rose" onClick={handleRoseCount}>
               <ChipBox icon={Rose} count={roseCount} />
             </IconButton>
@@ -168,10 +217,17 @@ export default function PostCard({ username }) {
             <IconButton aria-label="ribbon" onClick={handleRibbonCount}>
               <ChipBox icon={Ribbon} count={ribbonCount} />
             </IconButton>
-          </Box>
-          <Box alignSelf="end">
+          </Grid>
+          <Grid>
             <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
+              {favourite ? (
+                <FavoriteIcon onClick={handleFavourite} />
+              ) : (
+                <FavoriteBorderIcon
+                  sx={{ color: { primaryColor } }}
+                  onClick={handleFavourite}
+                />
+              )}
             </IconButton>
             <ExpandMore
               expand={expanded}
@@ -183,8 +239,8 @@ export default function PostCard({ username }) {
             </ExpandMore>
 
             <ChipBox icon={Eye} count={viewCount} />
-          </Box>
-        </Box>
+          </Grid>
+        </Grid>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>

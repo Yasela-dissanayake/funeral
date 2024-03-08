@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import { primaryColor } from "../utils/Colors";
 
 const PrimaryButton = ({ text, className, ...props }) => {
   return (

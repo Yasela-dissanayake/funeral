@@ -1,9 +1,10 @@
-import plan from "../icons/plan.svg";
-import support from "../icons/support.svg";
-import law from "../icons/law.svg";
-import wishes from "../icons/wishes.svg";
-import profile from "../icons/profile.svg";
-import obituaries from "../icons/obituaries.svg";
+import plan from "../assets/icons/plan.svg";
+import support from "../assets/icons/support.svg";
+import law from "../assets/icons/law.svg";
+import wishes from "../assets/icons/wishes.svg";
+import profile from "../assets/icons/profile.svg";
+import obituaries from "../assets/icons/obituaries.svg";
+import user1 from "../assets/images/user1.png";
 
 export const sidebarItems = [
   { id: 1, name: "Plan Ahead", icon: plan, path: "/plan-ahead" },
@@ -22,4 +23,79 @@ export const sidebarItems = [
     path: "/funeral-directors",
   },
   { id: 6, name: "Obituaries", icon: obituaries, path: "/obituaries" },
+];
+
+export const userDate = [
+  {
+    id: 1,
+    name: "Chadwick Brown",
+    img: { user1 },
+    born: "12th January 1989",
+    died: "24th June 2020",
+    notice: "Death Notice",
+    date: "12",
+    location: "London",
+    message:
+      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
+  },
+  {
+    id: 2,
+    name: "Chadwick Brown",
+    img: { user1 },
+    born: "12th January 1989",
+    died: "24th June 2020",
+    notice: "Acknowledgement",
+    date: "12",
+    location: "London",
+    message:
+      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
+  },
+  {
+    id: 3,
+    name: "Chadwick Brown",
+    img: { user1 },
+    born: "12th January 1989",
+    died: "24th June 2020",
+    notice: "In Memoriam",
+    date: "12",
+    location: "London",
+    message:
+      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
+  },
+  {
+    id: 4,
+    name: "Chadwick Brown",
+    img: { user1 },
+    born: "12th January 1989",
+    died: "24th June 2020",
+    notice: "Death Notice",
+    date: "12",
+    location: "London",
+    message:
+      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
+  },
+  {
+    id: 5,
+    name: "Chadwick Brown",
+    img: { user1 },
+    born: "12th January 1989",
+    died: "24th June 2020",
+    notice: "Death Notice",
+    date: "12",
+    location: "London",
+    message:
+      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
+  },
+  {
+    id: 6,
+    name: "Chadwick Brown",
+    img: { user1 },
+    born: "12th January 1989",
+    died: "24th June 2020",
+    notice: "Death Notice",
+    date: "12",
+    location: "London",
+    message:
+      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
+  },
 ];

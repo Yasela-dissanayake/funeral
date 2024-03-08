@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import DeleteIcon from "@mui/icons-material/Delete";
-import SendIcon from "@mui/icons-material/Send";
 import Stack from "@mui/material/Stack";
-import Sms from "../icons/sms.svg";
-import { primaryColor } from "../utils/Colors";
+import Sms from "../assets/icons/sms.svg";
 
 export default function IconLabelButtons() {
   const [count, setCount] = useState(5);
