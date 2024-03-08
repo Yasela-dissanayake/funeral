@@ -29,7 +29,7 @@ export const userData = [
   {
     id: 1,
     name: "Chadwick Brown",
-    img: { user1 },
+    img: user1,
     born: "12th January 1989",
     died: "24th June 2020",
     notice: "Death Notice",
@@ -41,7 +41,7 @@ export const userData = [
   {
     id: 2,
     name: "Chadwick Brown",
-    img: { user1 },
+    img: user1,
     born: "12th January 1989",
     died: "24th June 2020",
     notice: "Acknowledgement",
@@ -53,7 +53,7 @@ export const userData = [
   {
     id: 3,
     name: "Chadwick Brown",
-    img: { user1 },
+    img: user1,
     born: "12th January 1989",
     died: "24th June 2020",
     notice: "In Memoriam",
@@ -65,7 +65,7 @@ export const userData = [
   {
     id: 4,
     name: "Chadwick Brown",
-    img: { user1 },
+    img: user1,
     born: "12th January 1989",
     died: "24th June 2020",
     notice: "Death Notice",
@@ -77,7 +77,7 @@ export const userData = [
   {
     id: 5,
     name: "Chadwick Brown",
-    img: { user1 },
+    img: user1,
     born: "12th January 1989",
     died: "24th June 2020",
     notice: "Death Notice",
@@ -89,7 +89,7 @@ export const userData = [
   {
     id: 6,
     name: "Chadwick Brown",
-    img: { user1 },
+    img: user1,
     born: "12th January 1989",
     died: "24th June 2020",
     notice: "Death Notice",

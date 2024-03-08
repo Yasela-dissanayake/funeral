@@ -29,6 +29,7 @@ import Twitter from "../assets/icons/twitter.svg";
 import Instagram from "../assets/icons/insta.svg";
 import YouTube from "../assets/icons/youtube.svg";
 import Services from "../assets/icons/funeralservices.svg";
+import user1 from "../assets/images/user1.png";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -118,7 +119,13 @@ export default function PostCard({
         </Typography>
       </Grid>
       <CardHeader
-        avatar={<Avatar aria-label="recipe" src={image} />}
+        avatar={
+          <Avatar
+            aria-label="recipe"
+            src={image}
+            sx={{ height: "80px", width: "80px" }}
+          />
+        }
         action={
           <Box display="inline-flex">
             <PrimaryButton text="Donate" />
@@ -246,7 +253,7 @@ export default function PostCard({
         </Grid>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
+        <CardContent sx={{ backgroundColor: "#F9F9F9" }}>
           <Typography paragraph>Method:</Typography>
           <Typography paragraph>
             Heat 1/2 cup of the broth in a pot until simmering, add saffron and
