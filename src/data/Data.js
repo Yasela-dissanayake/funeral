@@ -5,6 +5,9 @@ import wishes from "../assets/icons/wishes.svg";
 import profile from "../assets/icons/profile.svg";
 import obituaries from "../assets/icons/obituaries.svg";
 import user1 from "../assets/images/user1.png";
+import user2 from "../assets/images/user2.png";
+import user3 from "../assets/images/user3.png";
+import user4 from "../assets/images/user4.png";
 
 export const sidebarItems = [
   { id: 1, name: "Plan Ahead", icon: plan, path: "/plan-ahead" },
@@ -97,5 +100,29 @@ export const userData = [
     location: "London",
     message:
       "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
+  },
+];
+
+export const userComments = [
+  {
+    name: "Jonny Peterz",
+    message:
+      "Mi ultricies dolor, quis risus, risus. Nisi, lacinia feugiat gravida sed tortor neque risus risus diam.",
+    timestamp: "21",
+    image: user2,
+  },
+  {
+    name: "Jessy Peterz",
+    message:
+      "Enim nibh tristique proin pharetra malesuada aenean fames ac, amet. Aliquet eget pellentesque est quis.",
+    timestamp: "21",
+    image: user3,
+  },
+  {
+    name: "Andrea Jonaththan",
+    message:
+      "Molestie aliquam, lacus dignissim volutpat cras. Aenean neque semper quam praesent morbi venenatis urna tempus.",
+    timestamp: "21",
+    image: user4,
   },
 ];

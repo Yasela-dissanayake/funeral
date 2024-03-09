@@ -8,7 +8,7 @@ const options = ["Edit", "Delete", "Report"];
 
 const ITEM_HEIGHT = 48;
 
-export default function MoreMenu() {
+export default function MoreMenu({ size, color }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -28,7 +28,7 @@ export default function MoreMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <MoreVertIcon sx={{ color: "black" }} />
+        <MoreVertIcon sx={{ color: color, width: size }} />
       </IconButton>
       <Menu
         id="long-menu"

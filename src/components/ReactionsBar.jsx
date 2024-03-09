@@ -7,7 +7,7 @@ import Candle from "../assets/icons/candle.svg";
 import Flowers from "../assets/icons/flowers.svg";
 import Ribbon from "../assets/icons/ribbon.svg";
 
-const ReactionsBar = () => {
+const ReactionsBar = ({ size }) => {
   const initialRoseCount = 10;
   const initialCandleCount = 65;
   const initialFlowerCount = 98;
@@ -45,16 +45,16 @@ const ReactionsBar = () => {
   return (
     <Grid>
       <IconButton aria-label="rose" onClick={handleRoseCount}>
-        <ChipBox icon={Rose} count={roseCount} />
+        <ChipBox icon={Rose} count={roseCount} size={size} />
       </IconButton>
       <IconButton aria-label="candle" onClick={handleCandleCount}>
-        <ChipBox icon={Candle} count={candleCount} />
+        <ChipBox icon={Candle} count={candleCount} size={size} />
       </IconButton>
       <IconButton aria-label="flowers" onClick={handleFlowerCount}>
-        <ChipBox icon={Flowers} count={flowerCount} />
+        <ChipBox icon={Flowers} count={flowerCount} size={size} />
       </IconButton>
       <IconButton aria-label="ribbon" onClick={handleRibbonCount}>
-        <ChipBox icon={Ribbon} count={ribbonCount} />
+        <ChipBox icon={Ribbon} count={ribbonCount} size={size} />
       </IconButton>
     </Grid>
   );
