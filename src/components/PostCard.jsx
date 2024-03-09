@@ -13,10 +13,6 @@ import CommentButton from "./CommentButton";
 import Box from "@mui/material/Box";
 import ChipBox from "../components/ChipBox";
 import Eye from "../assets/icons/eye.svg";
-import Rose from "../assets/icons/rose.svg";
-import Candle from "../assets/icons/candle.svg";
-import Flowers from "../assets/icons/flowers.svg";
-import Ribbon from "../assets/icons/ribbon.svg";
 import { primaryColor } from "../utils/Colors";
 import PrimaryButton from "./PrimaryButton";
 import Grid from "@mui/material/Grid";
@@ -30,6 +26,8 @@ import Instagram from "../assets/icons/insta.svg";
 import YouTube from "../assets/icons/youtube.svg";
 import Services from "../assets/icons/funeralservices.svg";
 import user1 from "../assets/images/user1.png";
+import { RecentActors } from "@mui/icons-material";
+import ReactionsBar from "./ReactionsBar";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -51,45 +49,12 @@ export default function PostCard({
   message,
   image,
 }) {
-  const initialRoseCount = 10;
-  const initialCandleCount = 65;
-  const initialFlowerCount = 98;
-  const initialRibbonCount = 5;
-
   const [expanded, setExpanded] = React.useState(false);
-  const [roseCount, setRoseCount] = useState(initialRoseCount);
-  const [candleCount, setCandleCount] = useState(initialCandleCount);
-  const [flowerCount, setFlowerCount] = useState(initialFlowerCount);
-  const [ribbonCount, setRibbonCount] = useState(initialRibbonCount);
   const [viewCount, setViewCount] = useState(1096);
   const [favourite, setFavourite] = useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
-  };
-
-  const handleRoseCount = () => {
-    setRoseCount(
-      roseCount === initialRoseCount ? roseCount + 1 : initialRoseCount
-    );
-  };
-
-  const handleCandleCount = () => {
-    setCandleCount(
-      candleCount === initialCandleCount ? candleCount + 1 : initialCandleCount
-    );
-  };
-
-  const handleFlowerCount = () => {
-    setFlowerCount(
-      flowerCount === initialFlowerCount ? flowerCount + 1 : initialFlowerCount
-    );
-  };
-
-  const handleRibbonCount = () => {
-    setRibbonCount(
-      ribbonCount === initialRibbonCount ? ribbonCount + 1 : initialRibbonCount
-    );
   };
 
   const handleFavourite = () => {
@@ -214,20 +179,7 @@ export default function PostCard({
       <Divider />
       <CardActions disableSpacing>
         <Grid container display="inline-flex" justifyContent="space-between">
-          <Grid>
-            <IconButton aria-label="rose" onClick={handleRoseCount}>
-              <ChipBox icon={Rose} count={roseCount} />
-            </IconButton>
-            <IconButton aria-label="candle" onClick={handleCandleCount}>
-              <ChipBox icon={Candle} count={candleCount} />
-            </IconButton>
-            <IconButton aria-label="flowers" onClick={handleFlowerCount}>
-              <ChipBox icon={Flowers} count={flowerCount} />
-            </IconButton>
-            <IconButton aria-label="ribbon" onClick={handleRibbonCount}>
-              <ChipBox icon={Ribbon} count={ribbonCount} />
-            </IconButton>
-          </Grid>
+          <ReactionsBar />
           <Grid>
             <IconButton aria-label="add to favorites">
               {favourite ? (
