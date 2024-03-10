@@ -60,9 +60,6 @@ const SingleComment = ({ name, timestamp, message, image }) => {
           </Grid>
         }
       />
-      <Box>
-        <hr />
-      </Box>
     </Card>
   );
 };

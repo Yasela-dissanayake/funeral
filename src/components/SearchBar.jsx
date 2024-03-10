@@ -3,10 +3,10 @@ import Box from "@mui/material/Box";
 import { primaryColor } from "../utils/Colors";
 import Typography from "@mui/material/Typography";
 
-import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { TitleContext } from "../context/TitleContext";
 import IconButton from "@mui/material/IconButton";
+import InputBase from "@mui/material/InputBase";
 
 const SearchBar = () => {
   const { pageTitle } = useContext(TitleContext);
@@ -60,7 +60,7 @@ const SearchBar = () => {
         <Box
           sx={{
             padding: "5px 15px",
-            pointerEvents: "none",
+            // pointerEvents: "none",
             alignSelf: "center",
             display: "inline-block",
             textAlign: "center",

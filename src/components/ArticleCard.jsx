@@ -7,8 +7,9 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { primaryColor } from "../utils/Colors";
+import Backdrop from "@mui/material/Backdrop";
 
-export default function ArticleCard() {
+export default function ArticleCard({ image, title }) {
   return (
     <Card
       sx={{
@@ -20,14 +21,17 @@ export default function ArticleCard() {
       <CardMedia
         component="img"
         sx={{ width: 100, height: 100, borderRadius: "10px" }}
-        image="https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg"
-        alt="Live from space album cover"
+        image={image}
+        alt={title}
       />
+
       <Box sx={{ display: "flex", flexDirection: "column" }}>
-        <CardContent sx={{ flex: "1 0 auto" }}>
-          <Typography component="div" fontSize="15px">
-            Frazer’s Holiday Remembrance Ornaments
-          </Typography>
+        <CardContent sx={{ flex: "1 0 auto", paddingTop: "0" }}>
+          <Box sx={{ width: "80%", marginBottom: "5px" }}>
+            <Typography component="div" fontSize="14px" fontWeight="600">
+              {title}
+            </Typography>
+          </Box>
           <Button
             endIcon={<KeyboardArrowRightIcon />}
             fontSiz="15px"

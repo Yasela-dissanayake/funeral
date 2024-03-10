@@ -6,7 +6,6 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import CommentButton from "./CommentButton";
@@ -29,6 +28,9 @@ import user1 from "../assets/images/user1.png";
 import ReactionsBar from "./ReactionsBar";
 import SingleComment from "./SingleComment";
 import { userComments } from "../data/Data";
+import IconButton from "@mui/material/IconButton";
+import InputBase from "@mui/material/InputBase";
+import SendIcon from "@mui/icons-material/Send";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -206,16 +208,55 @@ export default function PostCard({
         </Grid>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent sx={{ backgroundColor: "#F9F9F9" }}>
+        <CardContent sx={{ backgroundColor: "#F9F9F9", padding: "0" }}>
           {userComments.map((comment) => (
-            <SingleComment
-              name={comment.name}
-              message={comment.message}
-              timestamp={comment.timestamp}
-              image={comment.image}
-            />
+            <Box>
+              <SingleComment
+                name={comment.name}
+                message={comment.message}
+                timestamp={comment.timestamp}
+                image={comment.image}
+              />
+              <hr color="white" />
+            </Box>
           ))}
         </CardContent>
+
+        <Box sx={{ margin: "24px 37px" }}>
+          <Box
+            bgcolor="#F0F0F0"
+            alignSelf="center"
+            justifyContent="space-between"
+            display="flex"
+            width="100%"
+            borderRadius="30px"
+            margin="auto"
+          >
+            <InputBase
+              placeholder="Write a comment"
+              inputProps={{ "aria-label": "search" }}
+              sx={{
+                color: "#C9C6C6",
+                fontSize: "16px",
+                marginLeft: "30px",
+              }}
+            />
+            <Box
+              sx={{
+                padding: "5px 15px",
+                alignSelf: "center",
+                display: "inline-block",
+                textAlign: "center",
+                justifyContent: "space-between",
+                rotate: "-60deg",
+              }}
+            >
+              <IconButton onClick={() => {}}>
+                <SendIcon color="black" />
+              </IconButton>
+            </Box>
+          </Box>
+        </Box>
       </Collapse>
     </Card>
   );

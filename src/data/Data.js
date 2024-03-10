@@ -8,6 +8,11 @@ import user1 from "../assets/images/user1.png";
 import user2 from "../assets/images/user2.png";
 import user3 from "../assets/images/user3.png";
 import user4 from "../assets/images/user4.png";
+import article1 from "../assets/images/article1.png";
+import article2 from "../assets/images/article2.png";
+import article3 from "../assets/images/article3.png";
+import article4 from "../assets/images/article4.png";
+import article5 from "../assets/images/article5.png";
 
 export const sidebarItems = [
   { id: 1, name: "Plan Ahead", icon: plan, path: "/plan-ahead" },
@@ -124,5 +129,33 @@ export const userComments = [
       "Molestie aliquam, lacus dignissim volutpat cras. Aenean neque semper quam praesent morbi venenatis urna tempus.",
     timestamp: "21",
     image: user4,
+  },
+];
+
+export const articles = [
+  {
+    id: 1,
+    title: "Frazer’s Holiday Remembrance Ornaments",
+    image: article1,
+  },
+  {
+    id: 2,
+    title: "Contemplating life from the viewpoint of a funeral director",
+    image: article2,
+  },
+  {
+    id: 3,
+    title: "Frazer’s Holiday Remembrance Ornaments ",
+    image: article3,
+  },
+  {
+    id: 4,
+    title: "Is Human Composting the Future of Deathcare? ",
+    image: article4,
+  },
+  {
+    id: 5,
+    title: "Frazer’s Holiday Remembrance Ornaments",
+    image: article5,
   },
 ];

@@ -5,10 +5,11 @@ import SearchBar from "./SearchBar";
 import Stack from "@mui/material/Stack";
 import RightBar from "../components/RightBar";
 import FeedLayout from "./FeedLayout";
+import Box from "@mui/material/Box";
 
 const BaseLayout = () => {
   return (
-    <div className="">
+    <Box sx={{ backgroundColor: "#fefefe" }}>
       <NavBar />
       <SearchBar />
       <Stack
@@ -22,7 +23,7 @@ const BaseLayout = () => {
         <FeedLayout />
         <RightBar />
       </Stack>
-    </div>
+    </Box>
   );
 };
 
