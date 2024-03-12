@@ -24,7 +24,6 @@ import Twitter from "../assets/icons/twitter.svg";
 import Instagram from "../assets/icons/insta.svg";
 import YouTube from "../assets/icons/youtube.svg";
 import Services from "../assets/icons/funeralservices.svg";
-import user1 from "../assets/images/user1.png";
 import ReactionsBar from "./ReactionsBar";
 import SingleComment from "./SingleComment";
 import { userComments } from "../data/Data";

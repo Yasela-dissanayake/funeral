@@ -1,14 +1,16 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 
 const PrimaryButton = ({ text, className, ...props }) => {
   return (
-    <div className={`${className}`} {...props}>
+    <Box className={`${className}`} {...props}>
       <Button
         variant="contained"
         onClick={() => {}}
         sx={{
-          my: 2,
+          // my: 2,
+          m: 0,
           px: 3,
           mr: 2,
           border: 1,
@@ -28,7 +30,7 @@ const PrimaryButton = ({ text, className, ...props }) => {
       >
         {text}
       </Button>
-    </div>
+    </Box>
   );
 };
 

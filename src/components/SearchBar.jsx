@@ -2,11 +2,8 @@ import React, { useContext } from "react";
 import Box from "@mui/material/Box";
 import { primaryColor } from "../utils/Colors";
 import Typography from "@mui/material/Typography";
-
-import SearchIcon from "@mui/icons-material/Search";
 import { TitleContext } from "../context/TitleContext";
-import IconButton from "@mui/material/IconButton";
-import InputBase from "@mui/material/InputBase";
+import SearchBox from "./SearchBox";
 
 const SearchBar = () => {
   const { pageTitle } = useContext(TitleContext);
@@ -26,6 +23,8 @@ const SearchBar = () => {
       display="flex"
       textAlign="center"
       justifyContent="space-between"
+      paddingRight="160px"
+      py={1}
     >
       <Typography
         color="white"
@@ -36,42 +35,7 @@ const SearchBar = () => {
         {pageTitle}
       </Typography>
 
-      <Box
-        bgcolor="white"
-        alignSelf="center"
-        justifyContent="space-between"
-        display="flex"
-        padding="2px 15px"
-        width="460px"
-        borderRadius="25px"
-        marginRight="160px"
-      >
-        <InputBase
-          placeholder="Search…"
-          inputProps={{ "aria-label": "search" }}
-          sx={{
-            color: "inherit",
-            "& .MuiInputBase-input": {
-              paddingLeft: `calc(1em + ${8})`,
-            },
-            fontSize: "14px",
-          }}
-        />
-        <Box
-          sx={{
-            padding: "5px 15px",
-            // pointerEvents: "none",
-            alignSelf: "center",
-            display: "inline-block",
-            textAlign: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <IconButton color="#111827" onClick={() => {}}>
-            <SearchIcon />
-          </IconButton>
-        </Box>
-      </Box>
+      <SearchBox width={460} height="60%" placeholder="Search…" />
     </Box>
   );
 };
