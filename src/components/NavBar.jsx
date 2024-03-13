@@ -171,7 +171,7 @@ function NavBar() {
             >
               <FavoriteBorderIcon />
             </IconButton>
-            <div className="3">
+            <div className="justify-center mt-5">
               <PrimaryButton text="LIST YOUR BUSINESS" />
             </div>
             <SecondaryButton text="NEWS FEED" />
