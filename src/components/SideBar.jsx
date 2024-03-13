@@ -8,6 +8,7 @@ import ListItemText from "@mui/material/ListItemText";
 import { sidebarItems } from "../data/Data";
 import { NavLink } from "react-router-dom";
 import { TitleContext } from "../context/TitleContext";
+import Typography from "@mui/material/Typography";
 
 const SideBar = () => {
   const { updateTitle } = useContext(TitleContext);
@@ -23,7 +24,6 @@ const SideBar = () => {
       sx={{
         width: "100%",
         maxWidth: 360,
-        bgcolor: "background.paper",
         paddingLeft: "160px",
       }}
     >
@@ -34,16 +34,28 @@ const SideBar = () => {
               <NavLink
                 to={item.path}
                 key={item.id}
-                underline="none"
                 onClick={() => handleTitle(item.name)}
-                sx={{ textDecoration: "none" }}
+                style={{
+                  textDecoration: "none",
+                  color: ({ isActive }) => (isActive ? "green" : "black"),
+                  backgroundColor: ({ isActive }) =>
+                    isActive ? "blue" : "transparent",
+                }}
               >
                 <ListItem disablePadding>
                   <ListItemButton>
                     <ListItemIcon>
                       <img src={item.icon} alt={item.name} />
                     </ListItemIcon>
-                    <ListItemText primary={item.name} sx={{ color: "black" }} />
+                    <ListItemText
+                      primary={
+                        <Typography
+                          sx={{ color: "black", textDecoration: "none" }}
+                        >
+                          {item.name}
+                        </Typography>
+                      }
+                    />
                   </ListItemButton>
                 </ListItem>
               </NavLink>
