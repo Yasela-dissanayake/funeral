@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 
-const PrimaryButton = ({
+const GlobalButton = ({
   text,
   borderColor,
   textColor,
@@ -10,6 +10,7 @@ const PrimaryButton = ({
   bgColor,
   hoverVBorderColor,
   hoverTextColor,
+  marginTop,
 }) => {
   return (
     <Box
@@ -25,12 +26,15 @@ const PrimaryButton = ({
           m: 0,
           px: 3,
           mr: 2,
+          mt: marginTop,
           border: 1,
           borderColor: borderColor,
           color: textColor,
           borderRadius: 8,
           bgcolor: bgColor,
           textTransform: "none",
+          boxShadow: "none",
+          width: "100%",
           "&:hover": {
             bgcolor: hoverBgColor,
             border: 1,
@@ -45,4 +49,4 @@ const PrimaryButton = ({
   );
 };
 
-export default PrimaryButton;
+export default GlobalButton;

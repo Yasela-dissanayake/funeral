@@ -7,6 +7,7 @@ import Grid from "@mui/material/Grid";
 import SearchBar from "../components/SearchBar";
 import SearchBox from "../components/SearchBox";
 import PrimaryButton from "../components/PrimaryButton";
+import SecondaryButton from "../components/SecondaryButton";
 
 const Obituaries = () => {
   return (
@@ -15,7 +16,7 @@ const Obituaries = () => {
         <Grid item md={4}>
           <SearchBox height="80%" placeholder="Name / Keyword" />
         </Grid>
-        <Grid container justifyContent="space-evenly" md={8}>
+        <Grid container justifyContent="space-evenly" spacing={2} md={8}>
           <Grid item md>
             <BasicDatePicker placeholder="From" />
           </Grid>
@@ -23,7 +24,7 @@ const Obituaries = () => {
             <BasicDatePicker placeholder="To" />
           </Grid>
           <Grid item md>
-            <PrimaryButton text="Search" />
+            <SecondaryButton text="Search" />
           </Grid>
         </Grid>
       </Grid>

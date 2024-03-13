@@ -1,16 +1,17 @@
 import React from "react";
-import GlobealButton from "./GlobalButton.jsx";
+import GlobalButton from "./GlobalButton.jsx";
 import { primaryColor, transparent } from "../utils/Colors.js";
 
-const PrimaryButton = ({ text }) => {
+const PrimaryButton = ({ text, marginTop }) => {
   return (
-    <GlobealButton
+    <GlobalButton
       bgColor={primaryColor}
       text={text}
       borderColor={primaryColor}
       hoverVBorderColor={primaryColor}
       hoverBgColor={transparent}
       hoverTextColor={primaryColor}
+      marginTop={marginTop}
     />
   );
 };

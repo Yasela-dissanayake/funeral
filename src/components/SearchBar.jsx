@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Box from "@mui/material/Box";
-import { primaryColor } from "../utils/Colors";
+import { primaryDarkColor } from "../utils/Colors";
 import Typography from "@mui/material/Typography";
 import { TitleContext } from "../context/TitleContext";
 import SearchBox from "./SearchBox";
@@ -15,7 +15,7 @@ const SearchBar = () => {
   console.log(pageTitle);
   return (
     <Box
-      bgcolor={primaryColor}
+      bgcolor={primaryDarkColor}
       height={70}
       mt={1}
       pl="160px"

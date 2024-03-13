@@ -7,6 +7,7 @@ import { primaryColor } from "../utils/Colors";
 import CardMedia from "@mui/material/CardMedia";
 import cardbg from "../assets/images/cardbg.png";
 import Typography from "@mui/material/Typography";
+import SecondaryButton from "./SecondaryButton";
 
 const RightBar = () => {
   return (
@@ -18,6 +19,7 @@ const RightBar = () => {
       <Box
         border="solid 1px #e4e2e2 "
         borderRadius="10px"
+        pb={2}
         sx={{ backgroundColor: "white" }}
       >
         <Box>
@@ -29,31 +31,8 @@ const RightBar = () => {
             />
           ))}
         </Box>
-        <Box sx={{ px: 2 }}>
-          <Button
-            variant="contained"
-            onClick={() => {}}
-            sx={{
-              my: 2,
-              boxShadow: "none",
-              color: primaryColor,
-              display: "block",
-              borderRadius: 8,
-              bgcolor: "#F2E4FF",
-              textTransform: "none",
-              width: "100%",
-              border: 1,
-              borderColor: "transparent",
-              "&:hover": {
-                bgcolor: "transparent",
-                border: 1,
-                borderColor: "#5A189A",
-                color: "#5A189A",
-              },
-            }}
-          >
-            View All Stories
-          </Button>
+        <Box pl={2}>
+          <SecondaryButton text="View All Stories" />
         </Box>
       </Box>
       <Box

@@ -13,7 +13,7 @@ import Box from "@mui/material/Box";
 import ChipBox from "../components/ChipBox";
 import Eye from "../assets/icons/eye.svg";
 import { primaryColor } from "../utils/Colors";
-import PrimaryButton from "./GlobalButton";
+import PrimaryButton from "./PrimaryButton";
 import Grid from "@mui/material/Grid";
 import Location from "../assets/icons/location.svg";
 import MoreMenu from "./MoreMenu";
@@ -95,7 +95,7 @@ export default function PostCard({
         }
         action={
           <Box display="inline-flex">
-            <PrimaryButton text="Donate" />
+            <PrimaryButton text="Donate" marginTop={2} />
             <Box aria-label="settings" mt={2}>
               <MoreMenu size="25px" color="#696A6C" />
             </Box>

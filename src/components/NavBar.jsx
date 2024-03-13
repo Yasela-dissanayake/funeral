@@ -11,10 +11,14 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { primaryColor } from "../utils/Colors";
-import PrimaryButton from "./PrimaryButton";
-import SecondaryButton from "./SecondaryButton";
+import {
+  primaryColor,
+  primaryDarkColor,
+  transparent,
+  textWhite,
+} from "../utils/Colors";
 import Grid from "@mui/material/Grid";
+import GlobalButton from "./GlobalButton";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -171,10 +175,35 @@ function NavBar() {
             >
               <FavoriteBorderIcon />
             </IconButton>
-            <div className="justify-center mt-5">
-              <PrimaryButton text="LIST YOUR BUSINESS" />
+            <div className="justify-center">
+              <GlobalButton
+                bgColor={primaryDarkColor}
+                text="LIST YOUR BUSINESS"
+                borderColor={primaryDarkColor}
+                hoverVBorderColor={primaryDarkColor}
+                hoverBgColor={transparent}
+                hoverTextColor={primaryDarkColor}
+              />
             </div>
-            <SecondaryButton text="NEWS FEED" />
+            <div className="justify-center ">
+              <GlobalButton
+                bgColor={transparent}
+                text="NEWS FEED"
+                textColor={primaryColor}
+                borderColor={primaryDarkColor}
+                hoverVBorderColor={primaryDarkColor}
+                hoverBgColor={primaryDarkColor}
+                hoverTextColor={textWhite}
+              />
+            </div>
+            {/* <GlobalButton
+              bgColor={primaryColor}
+              text="NEWS FEED"
+              borderColor={primaryColor}
+              hoverVBorderColor={primaryColor}
+              hoverBgColor={transparent}
+              hoverTextColor={primaryColor}
+            /> */}
           </Box>
 
           {/* avatar */}
