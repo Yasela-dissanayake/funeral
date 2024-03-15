@@ -8,6 +8,7 @@ import SearchBar from "../components/SearchBar";
 import SearchBox from "../components/SearchBox";
 import PrimaryButton from "../components/PrimaryButton";
 import SecondaryButton from "../components/SecondaryButton";
+import UsePagination from "../components/Pagination";
 
 const Obituaries = () => {
   return (
@@ -43,6 +44,9 @@ const Obituaries = () => {
           />
         </Box>
       ))}
+      <Box display="flex" justifyContent="end">
+        <UsePagination />
+      </Box>
     </div>
   );
 };
