@@ -18,12 +18,12 @@ const SearchBar = () => {
       bgcolor={primaryDarkColor}
       height={70}
       mt={1}
-      pl="160px"
+      pl="235px"
       alignSelf="center"
       display="flex"
       textAlign="center"
       justifyContent="space-between"
-      paddingRight="160px"
+      paddingRight="220px"
       py={1}
     >
       <Typography

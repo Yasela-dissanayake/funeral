@@ -22,9 +22,9 @@ const SideBar = () => {
     <Box
       flex={2}
       sx={{
-        width: "100%",
-        maxWidth: 360,
-        paddingLeft: "160px",
+        // width: "100%",
+        maxWidth: 300,
+        paddingLeft: "220px",
       }}
     >
       <nav aria-label="main mailbox folders">

@@ -49,11 +49,18 @@ function NavBar() {
       sx={{
         bgcolor: "transparent",
         boxShadow: "none",
-        paddingLeft: "160px",
-        paddingRight: "160px",
+        width: "100%",
+        paddingRight: "200px",
+        paddingLeft: "210px",
       }}
     >
-      <Container maxWidth="xl" sx={{ margin: 0 }}>
+      <Container
+        maxWidth="xl"
+        sx={{
+          margin: 0,
+          minWidth: "100%",
+        }}
+      >
         <Toolbar disableGutters>
           {/* main logo text */}
           <Grid container width="15%">

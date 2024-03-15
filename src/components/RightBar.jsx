@@ -63,23 +63,18 @@ const RightBar = () => {
         </Box>
       </Box> */}
 
-      <ImageList sx={{ width: 500, height: 450 }}>
-        <ImageListItem>
-          <img src={cardbg} alt="background" />
-          <ImageListItemBar
-            title="Title"
-            subtitle="Sub Title"
-            actionIcon={
-              <IconButton
-                sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                // aria-label={`info about ${item.title}`}
-              >
-                <InfoIcon />
-              </IconButton>
-            }
-          />
-        </ImageListItem>
-      </ImageList>
+      <Box sx={{ display: "flex" }}>
+        <ImageList cols={1}>
+          {" "}
+          {/* Set cols to 1 for a single-column layout */}
+          <ImageListItem sx={{ width: "100%", flexGrow: 1 }}>
+            {" "}
+            {/* Set width and flexGrow */}
+            <img src={cardbg} alt="background" />
+            {/* <ImageListItemBar title="Title" subtitle="Sub Title" /> */}
+          </ImageListItem>
+        </ImageList>
+      </Box>
     </Box>
   );
 };
