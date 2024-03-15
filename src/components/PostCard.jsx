@@ -13,23 +13,20 @@ import Box from "@mui/material/Box";
 import ChipBox from "../components/ChipBox";
 import Eye from "../assets/icons/eye.svg";
 import { primaryColor } from "../utils/Colors";
-import PrimaryButton from "./PrimaryButton";
-import Grid from "@mui/material/Grid";
 import Location from "../assets/icons/location.svg";
 import MoreMenu from "./MoreMenu";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Divider from "@mui/material/Divider";
-import FaceBook from "../assets/icons/fb.svg";
-import Twitter from "../assets/icons/twitter.svg";
-import Instagram from "../assets/icons/insta.svg";
-import YouTube from "../assets/icons/youtube.svg";
 import Services from "../assets/icons/funeralservices.svg";
 import ReactionsBar from "./ReactionsBar";
 import SingleComment from "./SingleComment";
 import { userComments } from "../data/Data";
+import PrimaryButton from "./PrimaryButton";
+import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import SendIcon from "@mui/icons-material/Send";
+import SocialMediaList from "./SocialMediaList";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -158,20 +155,7 @@ export default function PostCard({
         </Typography>
       </CardContent>
       <Grid container display="inline-flex" justifyContent="space-between">
-        <Grid ml={2}>
-          <IconButton aria-label="facebook">
-            <img src={FaceBook} />
-          </IconButton>
-          <IconButton aria-label="twitter">
-            <img src={Twitter} />
-          </IconButton>
-          <IconButton aria-label="instagram">
-            <img src={Instagram} />
-          </IconButton>
-          <IconButton aria-label="youtube">
-            <img src={YouTube} />
-          </IconButton>
-        </Grid>
+        <SocialMediaList />
         <Grid mr={3}>
           <Typography variant="body2">
             <a href="#">Bibliography</a>
