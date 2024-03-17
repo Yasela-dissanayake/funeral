@@ -61,9 +61,12 @@ function NavBar() {
           minWidth: "100%",
         }}
       >
-        <Toolbar disableGutters>
+        <Toolbar
+          disableGutters
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
           {/* main logo text */}
-          <Grid container width="15%">
+          <Grid container width="25%">
             <Grid item lg={12}>
               <Typography
                 variant="h5"
@@ -163,47 +166,48 @@ function NavBar() {
           </Typography>
 
           {/* nav buttons */}
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "end",
-            }}
-          >
-            <IconButton
-              aria-label="favourite"
-              onClick={handleCloseNavMenu}
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box
               sx={{
-                my: 2,
-                color: { primaryColor },
-                display: "flex",
-                mr: 1,
+                // flexGrow: 1,
+                display: { xs: "none", md: "flex" },
+                justifyContent: "end",
               }}
             >
-              <FavoriteBorderIcon />
-            </IconButton>
-            <div className="justify-center">
-              <GlobalButton
-                bgColor={primaryDarkColor}
-                text="LIST YOUR BUSINESS"
-                borderColor={primaryDarkColor}
-                hoverVBorderColor={primaryDarkColor}
-                hoverBgColor={transparent}
-                hoverTextColor={primaryDarkColor}
-              />
-            </div>
-            <div className="justify-center ">
-              <GlobalButton
-                bgColor={transparent}
-                text="NEWS FEED"
-                textColor={primaryColor}
-                borderColor={primaryDarkColor}
-                hoverVBorderColor={primaryDarkColor}
-                hoverBgColor={primaryDarkColor}
-                hoverTextColor={textWhite}
-              />
-            </div>
-            {/* <GlobalButton
+              <IconButton
+                aria-label="favourite"
+                onClick={handleCloseNavMenu}
+                sx={{
+                  my: 2,
+                  color: { primaryColor },
+                  display: "flex",
+                  mr: 1,
+                }}
+              >
+                <FavoriteBorderIcon />
+              </IconButton>
+              <div className="justify-center">
+                <GlobalButton
+                  bgColor={primaryDarkColor}
+                  text="LIST YOUR BUSINESS"
+                  borderColor={primaryDarkColor}
+                  hoverVBorderColor={primaryDarkColor}
+                  hoverBgColor={transparent}
+                  hoverTextColor={primaryDarkColor}
+                />
+              </div>
+              <div className="justify-center ">
+                <GlobalButton
+                  bgColor={transparent}
+                  text="NEWS FEED"
+                  textColor={primaryColor}
+                  borderColor={primaryDarkColor}
+                  hoverVBorderColor={primaryDarkColor}
+                  hoverBgColor={primaryDarkColor}
+                  hoverTextColor={textWhite}
+                />
+              </div>
+              {/* <GlobalButton
               bgColor={primaryColor}
               text="NEWS FEED"
               borderColor={primaryColor}
@@ -211,19 +215,19 @@ function NavBar() {
               hoverBgColor={transparent}
               hoverTextColor={primaryColor}
             /> */}
-          </Box>
+            </Box>
 
-          {/* avatar */}
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu0gYR-As9-_w2_fjRc895mD_91WQ5p7N_9Q&usqp=CAU"
-                />
-              </IconButton>
-            </Tooltip>
-            {/* <Menu
+            {/* avatar */}
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar
+                    alt="Remy Sharp"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu0gYR-As9-_w2_fjRc895mD_91WQ5p7N_9Q&usqp=CAU"
+                  />
+                </IconButton>
+              </Tooltip>
+              {/* <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -245,6 +249,7 @@ function NavBar() {
                 </MenuItem>
               ))}
             </Menu> */}
+            </Box>
           </Box>
         </Toolbar>
       </Container>

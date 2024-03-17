@@ -9,6 +9,7 @@ import { sidebarItems } from "../data/Data";
 import { NavLink } from "react-router-dom";
 import { TitleContext } from "../context/TitleContext";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 
 const SideBar = () => {
   const { updateTitle } = useContext(TitleContext);
@@ -19,12 +20,14 @@ const SideBar = () => {
   };
 
   return (
-    <Box
+    <Grid
+      item
       flex={2}
+      md={4}
       sx={{
-        // width: "100%",
-        maxWidth: 300,
+        maxWidth: "40%",
         paddingLeft: "220px",
+        display: { xs: "none", md: "flex" },
       }}
     >
       <nav aria-label="main mailbox folders">
@@ -62,7 +65,7 @@ const SideBar = () => {
             ))}
         </List>
       </nav>
-    </Box>
+    </Grid>
   );
 };
 

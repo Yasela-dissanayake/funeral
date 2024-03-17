@@ -8,6 +8,7 @@ import FeedLayout from "./FeedLayout";
 import Box from "@mui/material/Box";
 import basebg from "../assets/images/basebg.png";
 import Footer from "./Footer";
+import Grid from "@mui/material/Grid";
 
 const BaseLayout = () => {
   return (
@@ -21,7 +22,7 @@ const BaseLayout = () => {
     >
       <NavBar />
       <SearchBar />
-      <Stack
+      {/* <Stack
         direction="row"
         spacing={3}
         justifyContent="center"
@@ -31,7 +32,19 @@ const BaseLayout = () => {
         <SideBar />
         <FeedLayout />
         <RightBar />
-      </Stack>
+      </Stack> */}
+      <Grid
+        // direction="row"
+        gap={3}
+        justifyContent="center"
+        paddingRight="220px"
+        marginTop={5}
+        container
+      >
+        <SideBar />
+        <FeedLayout />
+        <RightBar />
+      </Grid>
       <Footer />
     </Box>
   );
