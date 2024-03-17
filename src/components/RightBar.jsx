@@ -40,40 +40,9 @@ const RightBar = () => {
           <SecondaryButton text="View All Stories" />
         </Box>
       </Box>
-      {/* <Box
-        mt={3}
-        p={4}
-        sx={{
-          backgroundImage: `url(${cardbg})`,
-          height: "28%",
-          width: "100%",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          borderRadius: "10px",
-        }}
-      >
-        <Box>
-          <img src={cardlogo} />
-          <Typography>We Are Here For You...</Typography>
-          <p>
-            Venenatis, quis risus justo, nisl, lorem venenatis. Nunc, pulvinar
-            amet in odio ac tellus
-          </p>
-          <PrimaryButton text="Contact Us" />
-        </Box>
-      </Box> */}
 
-      <Box sx={{ display: "flex" }}>
-        <ImageList cols={1}>
-          {" "}
-          {/* Set cols to 1 for a single-column layout */}
-          <ImageListItem sx={{ width: "100%", flexGrow: 1 }}>
-            {" "}
-            {/* Set width and flexGrow */}
-            <img src={cardbg} alt="background" />
-            {/* <ImageListItemBar title="Title" subtitle="Sub Title" /> */}
-          </ImageListItem>
-        </ImageList>
+      <Box sx={{ display: "flex", marginTop: "20px" }}>
+        <img src={cardbg} alt="background" style={{ width: "100%" }} />
       </Box>
     </Box>
   );
