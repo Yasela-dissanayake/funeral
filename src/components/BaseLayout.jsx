@@ -37,7 +37,7 @@ const BaseLayout = () => {
         // direction="row"
         gap={3}
         justifyContent="center"
-        paddingRight="220px"
+        // paddingRight="220px"
         marginTop={5}
         container
       >

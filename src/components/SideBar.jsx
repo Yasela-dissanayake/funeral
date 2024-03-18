@@ -22,11 +22,10 @@ const SideBar = () => {
   return (
     <Grid
       item
-      flex={2}
-      md={4}
+      md={2}
       sx={{
-        maxWidth: "40%",
-        paddingLeft: "220px",
+        // maxWidth: "60%",
+        // paddingLeft: "220px",
         display: { xs: "none", md: "flex" },
       }}
     >

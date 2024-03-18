@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 
 const Feed = () => {
   return (
-    <Grid md={5} sm={12}>
+    <Grid item md={4} sm={12} sx={{ margin: { sm: "20px 50px", md: "0" } }}>
       <Outlet />
     </Grid>
   );
