@@ -16,6 +16,7 @@ const RightBar = () => {
       sx={{
         display: { sm: "flex", md: "block" },
         margin: { sm: "20px 50px", md: "0" },
+        maxWidth: { md: "330px" },
       }}
     >
       <Grid

@@ -8,7 +8,6 @@ const SearchBox = ({ width, height, placeholder }) => {
   return (
     <Box
       bgcolor="#f0f0f0"
-      alignSelf="center"
       justifyContent="space-between"
       display="flex"
       padding="2px 15px"
@@ -30,7 +29,6 @@ const SearchBox = ({ width, height, placeholder }) => {
       <Box
         sx={{
           padding: "5px 15px",
-          // pointerEvents: "none",
           alignSelf: "center",
           display: "inline-block",
           textAlign: "center",

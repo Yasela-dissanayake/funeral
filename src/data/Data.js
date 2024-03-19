@@ -56,7 +56,7 @@ export const userData = [
     date: "12",
     location: "London",
     message:
-      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
+      "Venenatis, quis risus justo, nisl, lorem venenatis. Nunc, pulvinar amet in odio ac tellus suscipit. Nibh commodo auctor vivamus id tincidunt. Venenatis, quis risus justo, nisl, lorem venenatis. Nunc, pulvinar amet in odio ac tellus suscipit. Nibh commodo auctor vivamus id tincidunt.",
   },
   {
     id: 3,
@@ -68,43 +68,7 @@ export const userData = [
     date: "12",
     location: "London",
     message:
-      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
-  },
-  {
-    id: 4,
-    name: "Chadwick Brown",
-    img: user1,
-    born: "12th January 1989",
-    died: "24th June 2020",
-    notice: "Death Notice",
-    date: "12",
-    location: "London",
-    message:
-      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
-  },
-  {
-    id: 5,
-    name: "Chadwick Brown",
-    img: user1,
-    born: "12th January 1989",
-    died: "24th June 2020",
-    notice: "Death Notice",
-    date: "12",
-    location: "London",
-    message:
-      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
-  },
-  {
-    id: 6,
-    name: "Chadwick Brown",
-    img: user1,
-    born: "12th January 1989",
-    died: "24th June 2020",
-    notice: "Death Notice",
-    date: "12",
-    location: "London",
-    message:
-      "Chadwick Brown was a loving husband, father, and friend. He will be missed by all who knew him.",
+      "Venenatis, quis risus justo, nisl, lorem venenatis. Nunc, pulvinar amet in odio ac tellus suscipit. Nibh commodo auctor vivamus id tincidunt. Venenatis, quis risus justo, nisl, lorem venenatis. Nunc, pulvinar amet in odio ac tellus suscipit. Nibh commodo auctor vivamus id tincidunt.",
   },
 ];
 

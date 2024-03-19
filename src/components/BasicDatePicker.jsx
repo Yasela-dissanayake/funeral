@@ -29,6 +29,9 @@ export default function BasicDatePicker({ placeholder }) {
           height: "100%",
           display: "flex",
           justifyContent: "center",
+          // alignItems: "center",
+          // alignSelf: "center",
+          mt: "10px",
           position: "relative",
         }}
       >

@@ -105,7 +105,7 @@ export default function PostCard({
         }
         subheader={
           <Grid container>
-            <Grid lg={12} display="inline-flex">
+            <Grid sm={12} sx={{ display: { md: "block", lg: "inline-flex" } }}>
               <Typography fontSize="11px" color="text.secondary">
                 Born:
               </Typography>
@@ -123,7 +123,7 @@ export default function PostCard({
                 {died}
               </Typography>
             </Grid>
-            <Grid display="block" lg={12}>
+            <Grid display="block" md={12}>
               <Typography
                 fontWeight="600"
                 color="black"
