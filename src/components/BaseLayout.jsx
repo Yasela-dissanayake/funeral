@@ -33,14 +33,7 @@ const BaseLayout = () => {
         <FeedLayout />
         <RightBar />
       </Stack> */}
-      <Grid
-        // direction="row"
-        gap={3}
-        justifyContent="center"
-        // paddingRight="220px"
-        marginTop={5}
-        container
-      >
+      <Grid gap={3} justifyContent="center" marginTop={5} container>
         <SideBar />
         <FeedLayout />
         <RightBar />

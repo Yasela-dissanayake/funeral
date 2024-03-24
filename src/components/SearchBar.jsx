@@ -18,12 +18,13 @@ const SearchBar = () => {
       bgcolor={primaryDarkColor}
       height={70}
       mt={1}
-      pl="235px"
+      pl={{ xs: "50px", md: "235px" }}
       alignSelf="center"
       display="flex"
       textAlign="center"
       justifyContent="space-between"
-      paddingRight="220px"
+      paddingRight={{ xs: "30px", md: "220px" }}
+      alignItems="center"
       py={1}
     >
       <Typography
@@ -31,6 +32,7 @@ const SearchBar = () => {
         fontWeight="600"
         fontSize="22px"
         alignSelf="center"
+        marginRight={{ xs: "20px", md: "0" }}
       >
         {pageTitle}
       </Typography>

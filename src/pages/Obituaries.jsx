@@ -22,17 +22,32 @@ const Obituaries = () => {
   return (
     <div>
       <Grid container>
-        <Grid item md={4} display="flex" alignItems="center">
+        <Grid
+          item
+          sm={6}
+          md={4}
+          display={{ sm: "none", md: "flex" }}
+          alignItems="center"
+        >
           <SearchBox height="60%" placeholder="Name / Keyword" />
         </Grid>
         <Grid container justifyContent="space-evenly" spacing={2} md={8}>
-          <Grid item md ml={2}>
+          <Grid item md ml={{ xs: 0, md: 2 }}>
             <BasicDatePicker placeholder="From" />
           </Grid>
           <Grid item md>
             <BasicDatePicker placeholder="To" />
           </Grid>
-          <Grid item md>
+          <Grid
+            item
+            sm={6}
+            md={4}
+            display={{ sm: "flex", md: "none" }}
+            alignItems="center"
+          >
+            <SearchBox height="60%" placeholder="Name / Keyword" />
+          </Grid>
+          <Grid item sm={6} md>
             <SecondaryButton text="Search" />
           </Grid>
         </Grid>
@@ -53,14 +68,14 @@ const Obituaries = () => {
             />
           </Box>{" "}
           {adIndex === index && (
-            <Box mb={3}>
-              <div>
-                <img
-                  src={advertisement1}
-                  alt="background"
-                  style={{ width: "100%" }}
-                />
-              </div>
+            <Box mb={3} sx={{ margin: { xs: "10px", sm: "0" } }}>
+              {/* <div> */}
+              <img
+                src={advertisement1}
+                alt="background"
+                style={{ width: "100%" }}
+              />
+              {/* </div> */}
             </Box>
           )}
         </React.Fragment>

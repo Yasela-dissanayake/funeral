@@ -28,10 +28,7 @@ export default function BasicDatePicker({ placeholder }) {
           width: "100%",
           height: "100%",
           display: "flex",
-          justifyContent: "center",
-          // alignItems: "center",
-          // alignSelf: "center",
-          mt: "10px",
+          mt: { xs: "0", md: "10px" },
           position: "relative",
         }}
       >

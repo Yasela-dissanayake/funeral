@@ -50,8 +50,8 @@ function NavBar() {
         bgcolor: "transparent",
         boxShadow: "none",
         width: "100%",
-        paddingRight: "200px",
-        paddingLeft: "210px",
+        paddingRight: { xs: "20px", md: "200px" },
+        paddingLeft: { xs: "20px", md: "200px" },
       }}
     >
       <Container
@@ -66,7 +66,11 @@ function NavBar() {
           sx={{ display: "flex", justifyContent: "space-between" }}
         >
           {/* main logo text */}
-          <Grid container width="25%">
+          <Grid
+            container
+            width="25%"
+            sx={{ display: { xs: "none", md: "flex" } }}
+          >
             <Grid item lg={12}>
               <Typography
                 variant="h5"
@@ -74,7 +78,7 @@ function NavBar() {
                 component="a"
                 href="#"
                 sx={{
-                  display: { xs: "none", md: "flex" },
+                  // display: { xs: "none", md: "flex" },
                   fontFamily: "monospace",
                   fontWeight: 700,
                   letterSpacing: "-0.1rem",
@@ -91,7 +95,7 @@ function NavBar() {
                 component="a"
                 href="#"
                 sx={{
-                  display: { xs: "none", md: "flex" },
+                  // display: { xs: "none", md: "flex" },
                   fontFamily: "monospace",
                   fontWeight: 400,
                   letterSpacing: "0rem",
